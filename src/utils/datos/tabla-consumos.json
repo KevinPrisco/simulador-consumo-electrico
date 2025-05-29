@@ -1,0 +1,89 @@
+{
+  "cocina": [
+    { "id": 1, "label": "Refrigerador", "potencia": 150 },
+    { "id": 2, "label": "Microondas", "potencia": 1200 },
+    { "id": 3, "label": "Licuadora", "potencia": 400 },
+    { "id": 4, "label": "Horno eléctrico", "potencia": 2000 },
+    { "id": 5, "label": "Cafetera", "potencia": 800 },
+    { "id": 6, "label": "Lavavajillas", "potencia": 1800 },
+    { "id": 7, "label": "Campana extractora", "potencia": 250 },
+    { "id": 8, "label": "Olla arrocera", "potencia": 700 },
+    { "id": 9, "label": "Enchufes", "potencia": 100 },
+    { "id": 10, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 11, "label": "Focos", "potencia": 60 },
+    { "id": 12, "label": "Otros", "potencia": 0 }
+  ],
+  "sala": [
+    { "id": 1, "label": "Televisor", "potencia": 100 },
+    { "id": 2, "label": "Sistema de sonido", "potencia": 150 },
+    { "id": 3, "label": "Ventilador", "potencia": 70 },
+    { "id": 4, "label": "Router WiFi", "potencia": 15 },
+    { "id": 5, "label": "Consola de videojuegos", "potencia": 120 },
+    { "id": 6, "label": "Enchufes", "potencia": 100 },
+    { "id": 7, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 8, "label": "Focos", "potencia": 60 },
+    { "id": 9, "label": "Otros", "potencia": 0 }
+  ],
+  "dormitorio": [
+    { "id": 1, "label": "Televisor", "potencia": 100 },
+    { "id": 2, "label": "Ventilador", "potencia": 70 },
+    { "id": 3, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 4, "label": "Computadora", "potencia": 250 },
+    { "id": 5, "label": "Enchufes", "potencia": 100 },
+    { "id": 6, "label": "Focos", "potencia": 60 },
+    { "id": 7, "label": "Otros", "potencia": 0 }
+  ],
+  "baño": [
+    { "id": 1, "label": "Calentador de agua", "potencia": 3000 },
+    { "id": 2, "label": "Ducha eléctrica", "potencia": 5500 },
+    { "id": 3, "label": "Enchufes", "potencia": 100 },
+    { "id": 4, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 5, "label": "Focos", "potencia": 60 },
+    { "id": 6, "label": "Otros", "potencia": 0 }
+  ],
+  "lavadero": [
+    { "id": 1, "label": "Lavadora", "potencia": 500 },
+    { "id": 2, "label": "Secadora", "potencia": 3000 },
+    { "id": 3, "label": "Enchufes", "potencia": 100 },
+    { "id": 4, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 5, "label": "Focos", "potencia": 60 },
+    { "id": 6, "label": "Otros", "potencia": 0 }
+  ],
+  "oficina": [
+    { "id": 1, "label": "Computadora", "potencia": 250 },
+    { "id": 2, "label": "Monitor externo", "potencia": 30 },
+    { "id": 3, "label": "Impresora", "potencia": 50 },
+    { "id": 4, "label": "Lámpara de escritorio", "potencia": 40 },
+    { "id": 5, "label": "Cargadores", "potencia": 20 },
+    { "id": 6, "label": "Enchufes", "potencia": 100 },
+    { "id": 7, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 8, "label": "Focos", "potencia": 60 },
+    { "id": 9, "label": "Otros", "potencia": 0 }
+  ],
+  "garage": [
+    { "id": 1, "label": "Herramientas eléctricas", "potencia": 1500 },
+    { "id": 2, "label": "Cargador de batería", "potencia": 300 },
+    { "id": 3, "label": "Luces de trabajo", "potencia": 100 },
+    { "id": 4, "label": "Enchufes", "potencia": 100 },
+    { "id": 5, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 6, "label": "Focos", "potencia": 60 },
+    { "id": 7, "label": "Otros", "potencia": 0 }
+  ],
+  "terraza, patio o sotano": [
+    { "id": 1, "label": "Bomba de agua", "potencia": 1000 },
+    { "id": 2, "label": "Sistema de riego", "potencia": 500 },
+    { "id": 3, "label": "Enchufes", "potencia": 100 },
+    { "id": 4, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 5, "label": "Focos", "potencia": 60 },
+    { "id": 6, "label": "Otros", "potencia": 0 }
+  ],
+  "otra": [
+    { "id": 1, "label": "Sistema de seguridad", "potencia": 80 },
+    { "id": 2, "label": "Aspiradora", "potencia": 1200 },
+    { "id": 3, "label": "Iluminación general", "potencia": 100 },
+    { "id": 4, "label": "Enchufes adicionales", "potencia": 100 },
+    { "id": 5, "label": "Aire acondicionado", "potencia": 2000 },
+    { "id": 6, "label": "Focos", "potencia": 60 },
+    { "id": 7, "label": "Otros", "potencia": 0 }
+  ]
+}

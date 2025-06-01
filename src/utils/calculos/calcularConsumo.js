@@ -7,7 +7,7 @@ export default function CalcularConsumos(UserData) {
   const ciudadTarifa = ciudades.find((c) => c.id === ciudad)?.costo ?? 0;
   const estratoTarifa =
     estratos.find((e) => e.id === estrato)?.modificador ?? 0;
-  let tarifaFinal = ciudadTarifa + estratoTarifa;
+  let tarifaFinal = ciudadTarifa * estratoTarifa;
 
   // 2. Si casa antigua, +10% al costo
   if (casaAntigua) {

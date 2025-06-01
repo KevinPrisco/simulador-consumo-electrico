@@ -192,6 +192,20 @@ input[type=number] {
   box-sizing: border-box;
 }
 
+/* Pantallas medianas (tabletas o pantallas < 900px) */
+@media (max-width: 1200px) {
+  .result-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Pantallas pequeñas (móviles < 600px) */
+@media (max-width: 800px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card-info-container{
   display: flex;
   flex-direction: column;

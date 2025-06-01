@@ -24,9 +24,9 @@ export const ciudades = [
 
 export const estratos = [
   { id: "1", label: "Estrato 1", modificador: 0.6 },
-  { id: "2", label: "Estrato 2", modificador: 0.7 },
-  { id: "3", label: "Estrato 3", modificador: 0.9 },
-  { id: "4", label: "Estrato 4", modificador: 1.0 },
-  { id: "5", label: "Estrato 5", modificador: 1.1 },
-  { id: "6", label: "Estrato 6", modificador: 1.2 },
+  { id: "2", label: "Estrato 2", modificador: 0.65 },
+  { id: "3", label: "Estrato 3", modificador: 0.7 },
+  { id: "4", label: "Estrato 4", modificador: 0.8 },
+  { id: "5", label: "Estrato 5", modificador: 0.9 },
+  { id: "6", label: "Estrato 6", modificador: 1.1 },
 ];

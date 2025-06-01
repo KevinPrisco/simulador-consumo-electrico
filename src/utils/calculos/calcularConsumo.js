@@ -5,7 +5,8 @@ export default function CalcularConsumos(UserData) {
 
   // 1. Obtener la tarifa base
   const ciudadTarifa = ciudades.find((c) => c.id === ciudad)?.costo ?? 0;
-  const estratoTarifa = estratos.find((e) => e.id === estrato)?.modificador ?? 0;
+  const estratoTarifa =
+    estratos.find((e) => e.id === estrato)?.modificador ?? 0;
   let tarifaFinal = ciudadTarifa + estratoTarifa;
 
   // 2. Si casa antigua, +10% al costo
@@ -23,32 +24,40 @@ export default function CalcularConsumos(UserData) {
     consumoTotalWh += consumoWh;
 
     if (!consumoPorHabitacion[habitacion]) {
-      consumoPorHabitacion[habitacion] = 0;
+      consumoPorHabitacion[habitacion] = { consumoWh: 0, costo: 0 };
     }
-    consumoPorHabitacion[habitacion] += consumoWh;
+
+    consumoPorHabitacion[habitacion].consumoWh += consumoWh;
   }
 
-  // 4. Convertir a kWh
+  // 4. Convertir total a kWh
   const consumoTotalKWh = consumoTotalWh / 1000;
   const costoTotal = consumoTotalKWh * tarifaFinal;
 
   // 5. Consumos por persona
   const personasNum = parseInt(personas) || 1;
-  const consumoPorPersona = Math.round((consumoTotalKWh / personasNum) * 100) / 100;
-  const costoPorPersona = costoTotal / personasNum;
+  const consumoPorPersona =
+    Math.round((consumoTotalKWh / personasNum) * 100) / 100;
+  const costoPorPersona = Math.round((costoTotal / personasNum) * 100) / 100;
 
-  // 6. Convertir consumo por habitación a kWh
-  const consumoHabitacionesKWh = {};
+  // 6. Convertir consumo por habitación a kWh y calcular costo por habitación
+  const consumoHabitaciones = {};
   for (const hab in consumoPorHabitacion) {
-    consumoHabitacionesKWh[hab] = consumoPorHabitacion[hab] / 1000;
+    const consumoKWh = consumoPorHabitacion[hab].consumoWh / 1000;
+    const costo = Math.round(consumoKWh * tarifaFinal * 100) / 100;
+
+    consumoHabitaciones[hab] = {
+      consumoKWh: Math.round(consumoKWh * 100) / 100,
+      costo,
+    };
   }
 
   // 7. Resultado final
   return {
-    consumoTotalKWh,
+    consumoTotalKWh: Math.round(consumoTotalKWh * 100) / 100,
     consumoPorPersonaKWh: consumoPorPersona,
-    costoTotal,
+    costoTotal: Math.round(costoTotal * 100) / 100,
     costoPorPersona,
-    consumoPorHabitacion: consumoHabitacionesKWh,
+    consumoPorHabitacion: consumoHabitaciones,
   };
 }

@@ -1,11 +1,13 @@
 "use client"
 import DynamicForm from '@simulador/components/Form/DynamicForm'
 import FormGeneral from '@simulador/components/Form/FormGeneral'
+import Result from '@simulador/components/Results/Result';
 import CalcularConsumos from '@simulador/utils/calculos/calcularConsumo';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 export default function page() {
-  // const [userData, setUserData] = useState({});
+  const [userConsumos, setuserConsumos] = useState({});
+  const [ShowResults, setShowResults] = useState(false);
   const dynamicFormRef = useRef();
 
   function CalcularCosto(FormGeneralData) {
@@ -15,8 +17,10 @@ export default function page() {
       ...FormGeneralData,
       aparatos: dynamicData || [],
     });
-
-    console.log(consumos);
+    
+    setuserConsumos(consumos);
+    setShowResults(true);
+    
   }
 
   return (
@@ -25,6 +29,9 @@ export default function page() {
       <div className="container-form">
         <FormGeneral CalcularCosto={CalcularCosto} />
         <DynamicForm ref={dynamicFormRef} />
+      </div>
+      <div className="container-results w-full">
+        {ShowResults && <Result consumos={userConsumos} />}
       </div>
     </div>
   );
